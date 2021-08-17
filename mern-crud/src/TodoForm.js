@@ -1,16 +1,13 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
-import { useHistory} from "react-router-dom";
 
 export const TodoForm = ({todo, onSubmit}) => {
 
     const {register, handleSubmit,} = useForm();
 
-    const history = useHistory();
 
     const submitHandler = handleSubmit((data) => {
         onSubmit(data);
-        history.push("/");
     });
 
 
