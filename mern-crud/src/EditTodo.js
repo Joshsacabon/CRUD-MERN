@@ -3,7 +3,7 @@ import { TodoForm } from './TodoForm';
 
 
 export const EditTodo = () => {
-    const [todo, setTodo] = useState([]);
+    const [todo, setTodo] = useState();
 
     useEffect(() =>{
         setTodo({

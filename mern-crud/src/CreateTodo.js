@@ -1,10 +1,11 @@
 import React from 'react';
 import { TodoForm } from './TodoForm';
+import { createTodo } from './api';
 
 export const CreateTodo = () => {
 
-    const onSubmit =(data) =>{
-        alert(JSON.stringify(data));
+    const onSubmit = (data) =>{
+        createTodo(data);
     };
 
     return <div className="container">
