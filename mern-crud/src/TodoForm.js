@@ -18,11 +18,11 @@ export const TodoForm = ({todo, onSubmit}) => {
         <form onSubmit={submitHandler}> 
             <div className="form-group">
                 <label htmlFor="text">Text:</label>
-                <input className="form-control" {...register("test")}/>
+                <input className="form-control" {...register("test")} id="text" type="text"/>
             </div>
             <div className="form-group">
                 <button  type="submit" className="btn btn-primary ">
-                    CreateTodo
+                    Save Todo
                 </button>
             </div>
         </form>
