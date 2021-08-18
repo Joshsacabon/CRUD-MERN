@@ -14,7 +14,7 @@ export const EditTodo = () => {
       setTodo(todo)
     }
     fetchTodo()
-  }, []);
+  }, [match]);
 
   const onSubmit = async (data) => {
     await updateTodo(data, match.params.id)
