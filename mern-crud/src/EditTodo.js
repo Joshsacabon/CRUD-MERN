@@ -5,17 +5,16 @@ import { getTodo, updateTodo } from "./api";
 
 export const EditTodo = () => {
   const match = useRouteMatch();
-  const [todo, setTodo] = useState([]);
+  const [todo, setTodo] = useState();
   const history = useHistory()
 
   useEffect(() => {
-    
     const fetchTodo = async () => {
       const todo = await getTodo(match.params.id);
       setTodo(todo);
     }
-    fetchTodo()
-  }, [ match]);
+    fetchTodo();
+  });
 
   const onSubmit = (data) => {
    updateTodo(data, match.params.id)
