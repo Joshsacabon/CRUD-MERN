@@ -6,8 +6,8 @@ import { useHistory } from "react-router-dom";
 export const CreateTodo = () => {
   const history = useHistory()
   
-  const onSubmit = (data) => {
-   createTodo(data)
+  const onSubmit =  (data) => {
+   createTodo(data);
     history.push("/")
   };
 
